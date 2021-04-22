@@ -1,24 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
+import Navbar from "./components/layout/Navbar";
 
-export class App extends Component {
-  foo = () => "Vig";
+class App extends Component {
   render() {
-    const name = "Manish Kumar";
-    const loading = true;
-    const showName = false;
-
     return (
       <div className='App'>
-        <h2>App is</h2>
-        {loading ? (
-          <h1>
-            Hello from {showName && name} {this.foo()}, you know that 1-1 is{" "}
-            {1 - 1}
-          </h1>
-        ) : (
-          <h4>Loading...</h4>
-        )}
+        <Navbar title='Github-Finder' icon='fab fa-github' />
       </div>
     );
   }
